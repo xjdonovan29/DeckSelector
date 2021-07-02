@@ -29,6 +29,7 @@ dependencies {
     implementation 'io.micronaut.groovy:micronaut-runtime-groovy'
     implementation 'io.micronaut.sql:micronaut-jdbc-hikari'
     implementation 'javax.annotation:javax.annotation-api'
+    implementation 'com.opencsv:opencsv:5.4'
     runtimeOnly 'ch.qos.logback:logback-classic'
     runtimeOnly 'com.h2database:h2'
     runtimeOnly 'org.apache.tomcat:tomcat-jdbc'

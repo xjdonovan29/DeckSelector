@@ -9,4 +9,8 @@ enum CardType {
     VICTORY,
     EVENT,
     WAY
+
+    static CardType byName(String name) {
+        find { it.name() == name.toUpperCase()}
+    }
 }

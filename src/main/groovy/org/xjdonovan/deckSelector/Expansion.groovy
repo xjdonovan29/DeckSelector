@@ -1,6 +1,6 @@
 package org.xjdonovan.deckSelector
 
-enum CardExpansions {
+enum Expansion {
     BASE,
     SEASIDE,
     CORNUCOPIA,
@@ -15,4 +15,8 @@ enum CardExpansions {
     EMPRIRES,
     NOCUTURNE,
     RENAISSANCE
+
+    static Expansion byName(String name) {
+        find { it.name() == name.toUpperCase()}
+    }
 }

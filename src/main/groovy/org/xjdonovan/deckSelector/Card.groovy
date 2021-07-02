@@ -7,6 +7,7 @@ class Card {
     String name
     Integer cost
     CardType type
+    Expansion expansion
     Integer action = 0
     Integer buy = 0
     Integer cards = 0
@@ -25,10 +26,10 @@ class Card {
     static constraints = {
         name unique:true, maxSize:32
         description nullable:true, maxSize:2048
-        cost minSize:0, maxSize:30
-        action minSize:0, maxSize:10
-        buy minSize:0, maxSize:10
-        cards minSize:0, maxSize:10
-        coin minSize:0, maxSize:10
+        cost min:0, max:30
+        action min:0, max:10
+        buy min:0, max:10
+        cards min:0, max:10
+        coin min:0, max:10
     }
 }

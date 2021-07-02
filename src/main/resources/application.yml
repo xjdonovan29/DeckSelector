@@ -3,12 +3,12 @@ micronaut:
     name: demo
 datasources:
   default:
-    url: jdbc:h2:file:./data/devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
+    url: jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
     driverClassName: org.h2.Driver
     username: sa
     password: ''
 dataSource:
-  url: jdbc:h2:file:./data/devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
+  url: jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
   driverClassName: org.h2.Driver
   username: sa
   password: ''
@@ -21,3 +21,6 @@ hibernate:
     queries: false
     use_second_level_cache: false
     use_query_cache: false
+jackson:
+  serialization:
+    indentOutput: true
